@@ -21,18 +21,16 @@ jobs:
         run: |
             node -v
             npm -v
-  run-a-parrallel-job:
-    runs-on: centos-latest
-    steps:
-        - name: Check the OS verion
-          run: cat /etc/os-release
-        - name: Check JDK Version
-          run: java -version
   run-a-depend-on:
     runs-on: windows-latest
     needs: run-shell-command
     steps: 
       - name: echo a string
         run: Write-Output "Windows String"
-      - name: Error Step
-        run: doesnotexits
+  run-a-parrallel-job:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Check the OS verion
+         run: cat /etc/os-release
+       - name: Check JDK Version
+         run: java -version
