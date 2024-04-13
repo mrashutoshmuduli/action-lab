@@ -26,7 +26,7 @@ jobs:
     needs: run-shell-command
     steps: 
       - name: echo a string
-        run: Write-Output "Windows Stringa"
+        run: Write-Output "Windows String1a"
   run-a-parrallel-job:
     runs-on: ubuntu-latest
     steps:
